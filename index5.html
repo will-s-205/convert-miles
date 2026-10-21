@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Convert Miles</title>
+</head>
+<body>
+    <input>
+    <button>Button</button>
+    <p>0 km</p>
+
+    <script>
+        const milesInput = document.querySelector('input');
+        const convertBtn = document.querySelector('Button');
+        const resultText = document.querySelector('p');
+
+        function convertMilesToKm() {
+          const miles = Number(milesInput.value);
+          
+          const kilometers = miles * 1.6;
+          
+          resultText.textContent = kilometers.toFixed(2) + " km";
+        }
+
+        convertBtn.addEventListener('click', convertMilesToKm);
+    </script>
+</body>
+</html>
